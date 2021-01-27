@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script>
+        $(function () {
+            $("#btnLogin").click(function () {
+                Login();
+            });
+        });
+        function Login() {
+            if ($("#txtName").val().length > 1) {
+                sessionStorage.setItem("user", $('#txtName').val());
+
+            } else {
+                alert("登录失败");
+                return;
+            }
+            serverClient();
+   
+        }
+        function serverClient() {
+              //1.注册服务器连接
+            var msghub = $.connection.msghub;
+            //2.给客户端注册方法
+            //接收到消息
+            msghub.client.getMsg = function (name, txt) {
+                console.log(name);
+                console.log(txt);
+                var txtTemplate = `<div>
+            <span>{{name}}</span>
+            <span>{{content}}</span>
+        </div>`;
+                var html = $(txtTemplate.replace('{{name}}', name)
+                    .replace('{{content}}', txt));
+                if (name == sessionStorage.getItem("user")) {
+                    html.css({ "color": "red" });
+                }
+                $('#Msglist').prepend(html);
+            }
+    
+            //3.启动连接并绑定使用
+            $.connection.hub.start().done(function () {
+                $('#sendBtn').removeAttr("disabled").click(function () {
+                    msghub.server.senMsg(sessionStorage.getItem("user"), $("#txtMsg").val());
+                });
+            }).fail(function () {
+                alert("失败")
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="Msglist">
+       
+    </div>
+    <input type="text" id="txtName"  /><button id="btnLogin">登录</button>
+    <input type="text" id="txtMsg"  />
+    <button id="sendBtn" disabled="disabled">发送消息</button>
+</body>
+</html>
