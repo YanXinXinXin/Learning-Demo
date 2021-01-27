@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<School>
+  <class name="001">
+    <Studen  id="1" name="demo1" age="18" />
+    <Studen  id="2" name="demo2" age="18" />
+    <Studen  id="3" name="demo3" age="18" />
+  </class>
+  <class name="002">
+    <Studen  id="1" name="demo1" age="18" />
+    <Studen  id="2" name="demo2" age="18" />
+    <Studen  id="3" name="demo3" age="18" />
+  </class>
+</School>

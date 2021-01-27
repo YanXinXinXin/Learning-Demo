@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="Css/css.css" rel="stylesheet" />
+    <link href="Css/iconfont.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#username").focus();
+            $("#username").select();
+
+
+        })
+        $('#username').keydown(function (event) {
+            if (event.keyCode == 13) {
+                if ($.trim($("#username").val()) == "") {
+                    $("#username").focus();
+                    return;
+                } else {
+                    $('#password').focus();
+                    $("#password").select();
+                }
+            }
+        });
+        $('#password').keydown(function (event) {
+
+            if ($.trim($("#password").val()) == "") {
+                $("#password").focus();
+                return;
+            }
+            if (event.keyCode == 13) {
+                LoginSys();
+            }
+        });
+
+        //进行登录验证
+        function LoginSys() {
+
+            if ($.trim($("#username").val()) == "") {
+                $("#username").focus();
+                return;
+            }
+            if ($.trim($("#password").val()) == "") {
+                $("#password").focus();
+                return;
+            }
+            var name = $('#username').val();
+            var ped = $('#password').val();
+
+
+            //获取传递前台的参数，UName，Pwd，Code
+            var postData = {
+                username: $('#username').val(),
+                pwd: $('#password').val(),
+            };
+            $.post("/login/LoginAction", postData, function (data) {
+                layer.closeAll('loading');
+                if (data.Successful == true) {
+                    console.log(data.Data.HomePageAdd);
+                    if (data.Data.HomePageAdd == null) {
+                        layer.msg("登录失败，系统未配置权限主页，请联系管理员", {
+                            offset: 't',
+                            anim: 6
+                        });
+                        return false;
+                    }
+                    if (data.Data.HomePageAdd == "null") {
+                        layer.msg("登录失败，系统未配置权限主页，请联系管理员", {
+                            offset: 't',
+                            anim: 6
+                        });
+                        return false;
+                    }
+                    //HomePageAdd
+                    if (data.Data.HomePageAdd != "")
+                        parent.window.location.href = data.Data.HomePageAdd + "?asmt=" + randomString(32);
+                    else {
+                        layer.msg("登录失败，系统未配置权限主页，请联系管理员", {
+                            offset: 't',
+                            anim: 6
+                        });
+                    }
+                    //parent.window.location.href = "/doctorstation/Index/";
+
+                }
+                else {
+                    layer.closeAll('loading');
+                    $('#username').focus();
+                    $("#username").select();
+                    layer.msg(data.Msg, {
+                        offset: 't',
+                        anim: 6
+                    });
+                }
+
+            })
+        }
+        function perit() {
+            parent.window.location.href = "/Printer/Index/";
+            //$.post("/Printer/webprinter", null, function (data) {
+
+            //})
+        }
+        function perit2() {
+            //parent.window.location.href = "/Printer/webprinter/";
+            $.post("/Printer/webprinter", null, function (data) {
+
+            })
+        }
+        function randomString(len) {
+            len = len || 32;
+            var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+            var maxPos = $chars.length;
+            var pwd = '';
+            for (i = 0; i < len; i++) {
+                pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+            }
+            return pwd;
+        }
+    </script>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="l-header">
+            <img src="~/Content/images/logo.png" /><span>重庆医科大学附属第一医院</span>
+        </div>
+        <div class="l-main">
+            <div class="form-main">
+                <div class="form-header">
+                    <div class="sm">欢迎进入</div><div class="lg">临床用血管理系统</div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">
+                        <span class="iconfont icon-user"></span><span>工号</span>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" class="form-control" placeholder="请输入您的工号" id="username">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">
+                        <span class="iconfont icon-mima"></span><span>登录密码</span>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" class="form-control" placeholder="请输入登录密码" id="password">
+                    </div>
+                </div>
+                <div class="form-button">
+                    <button type="button" class="btn btn-lg btn-block btn-info">立即登录</button>
+                </div>
+                <label class="foot-label">
+                    <input type="checkbox" checked="checked"><span>我已阅读并同意<a href="">《用户服务协议》</a></span>
+                </label>
+            </div>
+        </div>
+        <div class="l-foot">©️ 版权信息</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\练习（2020.11.2）\栈和堆\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\练习（2020.11.2）\栈和堆 --序列化与反序列化\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
