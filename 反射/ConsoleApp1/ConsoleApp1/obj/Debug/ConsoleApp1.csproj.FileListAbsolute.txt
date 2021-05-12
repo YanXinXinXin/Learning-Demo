@@ -1,0 +1,7 @@
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\ConsoleApp1\bin\Debug\libs\StudentManger.dll

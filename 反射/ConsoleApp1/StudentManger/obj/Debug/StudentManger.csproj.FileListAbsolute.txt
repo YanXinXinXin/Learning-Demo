@@ -1,0 +1,6 @@
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\StudentManger\bin\Debug\StudentManger.dll
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\StudentManger\bin\Debug\StudentManger.pdb
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\StudentManger\obj\Debug\StudentManger.csproj.CoreCompileInputs.cache
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\StudentManger\obj\Debug\StudentManger.dll
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\StudentManger\obj\Debug\StudentManger.pdb
+E:\.NET CORE MVC\哔哩哔哩学习Demo\反射\ConsoleApp1\StudentManger\obj\Debug\StudentManger.csprojAssemblyReference.cache
